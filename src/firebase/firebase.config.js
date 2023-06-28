@@ -1,17 +1,23 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
+
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
+
+console.log("environment variable", process.env.REACT_APP_apiKey)
+
+
 const firebaseConfig = {
-  apiKey: "AIzaSyC1cu_DN4EFbYLefd4I1WCMRbAMP12HRG0",
-  authDomain: "the-news-dragon-project-cc8e3.firebaseapp.com",
-  projectId: "the-news-dragon-project-cc8e3",
-  storageBucket: "the-news-dragon-project-cc8e3.appspot.com",
-  messagingSenderId: "774365573735",
-  appId: "1:774365573735:web:d13617813b958b947a1ac2"
+  apiKey: process.env.REACT_APP_apiKey,
+  authDomain: process.env.REACT_APP_authDomain,
+  projectId: process.env.REACT_APP_projectId,
+  storageBucket: process.env.REACT_APP_storageBucket,
+  messagingSenderId: process.env.REACT_APP_messagingSenderId,
+  appId: process.env.REACT_APP_appId
 };
+console.log(firebaseConfig);
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
